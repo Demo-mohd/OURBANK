@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Bank</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loginSection">
+            <h1>Demo Bank</h1>
+            <input type="text" id="username" placeholder="أدخل اسم المستخدم">
+            <input type="password" id="password" placeholder="أدخل كلمة المرور">
+            <button onclick="login()">دخول</button>
+            <div id="errorMessage" style="color: red;"></div>
+            <div id="setupSection" style="display: none;">
+                <input type="password" id="newPassword" placeholder="إنشاء كلمة مرور جديدة">
+                <button onclick="setPassword()">إعداد كلمة المرور</button>
+            </div>
+        </div>
+
+        <div id="welcomeScreen" style="display: none;">
+            <h2>مرحبا بكم في بنكنا المتواضع</h2>
+            <span class="design-text">Demo Bank for Family Money Note</span>
+            <span class="design-text">Demo for design</span>
+        </div>
+
+        <div id="appSection" style="display: none;">
+            <h2>إدارة الأعضاء</h2>
+            <input type="text" id="memberName" placeholder="أدخل اسم العضو">
+            <button onclick="addMember()">إضافة عضو</button>
+            <div id="membersList"></div>
+            <div>
+                <h3>الإجمالي: <span id="totalAmount">0</span> جنيهاً</h3>
+            </div>
+            <button onclick="logout()">تسجيل الخروج</button>
+            <button onclick="resetPassword()">إعادة تعيين كلمة المرور</button>
+            <button onclick="saveChanges()">حفظ التحديثات</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
